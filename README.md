@@ -10,11 +10,12 @@ Run the following command in the root directory of Hexo:
 npm install hexo-tag-imgurl --save
 ```
 
-Then add your CDN url in your `_config.yml`.
+Then add your CDN url in your site `_config.yml`.
 
 ```
 # Imgurl
-imgurl: <Your CDN url>
+# Important: This value starts without a protocol and it doesn't end with '/'.
+imgurl: example.com/images
 ```
 
 ## Usage
@@ -27,7 +28,8 @@ Example:
 
 ```
 # Imgurl
-imgurl: http://example.com/images/
+# Important: This value starts without a protocol and it doesn't end with '/'.
+imgurl: example.com/images
 ```
 
 ```
@@ -37,5 +39,5 @@ imgurl: http://example.com/images/
 Will output the HTML:
 
 ```
-<img src="http://example.com/images/test-post/test.png" class="full-image" alt="test.png">
+<img src="//example.com/images/test-post/test.png" class="full-image" alt="test.png">
 ```
