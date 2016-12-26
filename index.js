@@ -2,7 +2,8 @@
 
 var hexoUtil = require('hexo-util');
 var imgUrl = hexo.config.imgurl;
-
+var rImgAttr = /[\:]+/;
+var rClasses = /[\,]+/;
 
 /**
  * Imgurl tag
@@ -14,25 +15,28 @@ var imgUrl = hexo.config.imgurl;
  */
 
 hexo.extend.tag.register('imgurl', function(args){
-  var imagePath = args[0];
-  var classes = args[1] || "";
+  // var imagePath = args[0];
   var imgAttr = {};
 
-  for (var i = 2; i < args.length; i++) {
+  for (var i = 0; i < args.length; i++) {
     var item = args[i];
-    if(item[0] === '\'' || item[0] === '"') {
-      item = item.substring(1, item.length - 1);
-    }
 
-    var parseAttr = item.split(':');
-    imgAttr[parseAttr[0]] = parseAttr[1];
+    if (rImgAttr.test(item)) {
+
+      if (item[0] === '\'' || item[0] === '"') {
+        item = item.substring(1, item.length - 1);
+      }
+
+      var parseAttr = item.split(':');
+
+      imgAttr[parseAttr[0]] = parseAttr[1];
+      } else if (rClasses.test(item)) {
+        imgAttr.class = item.split(',').join(' ');
+      } else {
+        imgAttr.src = "//" + imgUrl + "/" + item;
+      }
   }
 
-  classes = classes.split(',');
-  imgAttr.class = classes.join(' ');
-  imgAttr.src = "//" + imgUrl + "/" + imagePath;
-
-
   return hexoUtil.htmlTag('img', imgAttr);
-  
+
 });
