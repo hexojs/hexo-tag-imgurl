@@ -1,5 +1,7 @@
 # Introduction
 
+[![npm](https://img.shields.io/npm/v/hexo-tag-imgurl.svg)](https://www.npmjs.com/package/hexo-tag-imgurl)  [![npm](https://img.shields.io/npm/dm/hexo-tag-imgurl.svg)](https://www.npmjs.com/package/hexo-tag-imgurl)  [![npm](https://img.shields.io/npm/l/hexo-tag-imgurl.svg)](https://www.npmjs.com/package/hexo-tag-imgurl)
+
 This is a [hexo](http://hexo.io) tag plugin which allows you to embed an image stored on CDN host.
 
 ## Installation
