@@ -3,7 +3,7 @@
 var hexoUtil = require('hexo-util');
 var imgUrl = hexo.config.imgurl;
 var rImgAttr = /[\:]+/;
-var rClasses = /[\,]+/;
+var rImgUrl = /(.png|.jpg|.gif|.bmp){1}/;
 
 /**
  * Imgurl tag
@@ -30,10 +30,10 @@ hexo.extend.tag.register('imgurl', function(args){
       var parseAttr = item.split(':');
 
       imgAttr[parseAttr[0]] = parseAttr[1];
-      } else if (rClasses.test(item)) {
-        imgAttr.class = item.split(',').join(' ');
-      } else {
+      } else if (rImgUrl.test(item)) {
         imgAttr.src = "//" + imgUrl + "/" + item;
+      } else {
+        imgAttr.class = item.split(',').join(' ');
       }
   }
 
