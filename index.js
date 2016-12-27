@@ -15,7 +15,7 @@ var rImgUrl = /(.png|.jpg|.gif|.bmp){1}/;
  */
 
 hexo.extend.tag.register('imgurl', function(args){
-  // var imagePath = args[0];
+  
   var imgAttr = {};
 
   for (var i = 0; i < args.length; i++) {
