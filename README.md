@@ -43,3 +43,9 @@ Will output the HTML:
 ```
 <img src="//example.com/images/test-post/test.png" class="full-image" alt="test.png">
 ```
+
+## TODO
+
+- [ ] Delete images after sync.
+- [ ] No article path required.
+- [ ] Built-in third party sync.
