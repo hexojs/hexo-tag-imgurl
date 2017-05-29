@@ -49,3 +49,4 @@ Will output the HTML:
 - [ ] Delete images after sync.
 - [ ] No article path required.
 - [ ] Built-in third party sync.
+- [ ] Add test script.
