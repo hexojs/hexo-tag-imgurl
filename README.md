@@ -17,7 +17,10 @@ Then add your CDN url in your site `_config.yml`.
 ```
 # Imgurl
 # Important: This value starts without a protocol and it doesn't end with '/'.
+# httpsMod: true | false 
+# If the value not set, image url will automatically adapt to the site's protocol.
 imgurl: example.com/images
+httpsMod:
 ```
 
 ## Usage

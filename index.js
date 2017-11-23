@@ -2,6 +2,7 @@
 
 var hexoUtil = require('hexo-util');
 var imgUrl = hexo.config.imgurl;
+var httpsMod = hexo.config.httpsMod;
 var rImgAttr = /[\:]+/;
 var rImgUrl = /(.png|.jpg|.gif|.bmp){1}/;
 
@@ -28,10 +29,19 @@ hexo.extend.tag.register('imgurl', function(args){
       }
 
       var parseAttr = item.split(':');
-
+      
       imgAttr[parseAttr[0]] = parseAttr[1];
       } else if (rImgUrl.test(item)) {
-        imgAttr.src = "//" + imgUrl + "/" + item;
+        let protocol = function(httpsMod) {
+          if (httpsMod == true) {
+            return "https://"
+          } else if (httpsMod == false) {
+            return "http://"
+          } else {
+            return "//"
+          }
+        }
+        imgAttr.src = protocol(httpsMod) + imgUrl + "/" + item;
       } else {
         imgAttr.class = item.split(',').join(' ');
       }
