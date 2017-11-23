@@ -33,9 +33,9 @@ hexo.extend.tag.register('imgurl', function(args){
       imgAttr[parseAttr[0]] = parseAttr[1];
       } else if (rImgUrl.test(item)) {
         let protocol = function(httpsMod) {
-          if (httpsMod == true) {
+          if (httpsMod === true) {
             return "https://"
-          } else if (httpsMod == false) {
+          } else if (httpsMod === false) {
             return "http://"
           } else {
             return "//"
