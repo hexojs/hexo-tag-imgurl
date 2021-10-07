@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/geekrainy/hexo-tag-imgurl#readme",
   "dependencies": {
-    "hexo-util": "^1.0.0"
+    "hexo-util": "^2.5.0"
   }
 }
