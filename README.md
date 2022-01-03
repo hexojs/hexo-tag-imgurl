@@ -1,3 +1,7 @@
+# DEPRECATED!
+
+hexo-tag-imgurl has been deprecated.
+
 # Introduction
 
 [![npm](https://img.shields.io/npm/v/hexo-tag-imgurl.svg?style=flat-square)](https://www.npmjs.com/package/hexo-tag-imgurl)  [![npm](https://img.shields.io/npm/dm/hexo-tag-imgurl.svg?style=flat-square)](https://www.npmjs.com/package/hexo-tag-imgurl)  [![npm](https://img.shields.io/npm/dt/hexo-tag-imgurl.svg?style=flat-square)](https://www.npmjs.com/package/hexo-tag-imgurl)  [![npm](https://img.shields.io/npm/l/hexo-tag-imgurl.svg?style=flat-square)](https://www.npmjs.com/package/hexo-tag-imgurl)
